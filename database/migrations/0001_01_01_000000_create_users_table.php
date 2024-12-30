@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->foreignIdFor(Avatars::class)->nullable()->constrained()->cascadeOnDelete();
+            // $table->foreignIdFor(Avatars::class)->nullable()->constrained()->cascadeOnDelete();
             $table->enum('role', ['utilisateur', 'administrateur', 'super~administrateur', 
             'designeur', 'assistant(e)'])->default('utilisateur');
             $table->enum('status', ['active', 'disable', 'restricted', 'locked'])->default('active');
